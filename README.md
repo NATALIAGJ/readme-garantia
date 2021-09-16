@@ -1,7 +1,11 @@
 # Garantía segura
 
 ## Manual de instalacion en ambiente local 
-Este documento presenta el paso a paso de instalación del proyecto garantia segura con tal de dejar una copia en su equipo con sistema operativo Windows. 
+Este documento presenta el paso a paso de instalación del proyecto garantia segura con tal de dejar una copia en su equipo con sistema operativo Windows. Este proyecto cuenta con 4 entornos los cuales son:
+- UAT: En este entorno se encuentran los ultimos cambios previos a pasar a produccion, son los cambios que ve el cliente y los cambios listos para aprobación.
+- PRODUCTIVO: En este entorno se encuentran los ultimos cambios los que ya han pasado por UAT y por todas las etapas de verificacion previas
+- DESARROLLO: En este entorno se encuentran los cambios actuales en desarrollo, es usado por el equipo de desarrollo
+- QA: Actualmente este entorno no se encuentra en uso
 
 ### Prerequisitos
 Debe contar con las siguientes herramientas instaladas en su equipo:
@@ -51,3 +55,14 @@ Debe contar con las siguientes herramientas instaladas en su equipo:
     ```sh
         [garantia-segura-backend] $ npm run develop
     ``` 
+
+5. Solicitar los certificados de conexion para las bases de datos y la ejecucion del backend del proyecto y posterioirmente el despliegue.
+
+6. Conexiones a los entornos de la base de datos
+    1. Acceder a su cuenta de AWS, obtener las urls y las contraseñas de conexion para las bases de datos que desea configurar
+    2. En la conexion se debe seleccionar como conexion ssh y conectarse a traves de ese modo dependiendo del entorno debe seleccionar certificados productivos o no de acuerdo a lo obtenido en el paso 5.
+
+7. Instalacion de Elastic beanstalk para despliegues
+8. 
+8. Descargar terraform y dejar el archivo ejecuitable en la raiz del repositorio: 
+> garantia-segura-infrastructure 
