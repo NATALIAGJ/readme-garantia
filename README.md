@@ -63,6 +63,47 @@ Debe contar con las siguientes herramientas instaladas en su equipo:
     2. En la conexion se debe seleccionar como conexion ssh y conectarse a traves de ese modo dependiendo del entorno debe seleccionar certificados productivos o no de acuerdo a lo obtenido en el paso 5.
 
 7. Instalacion de Elastic beanstalk para despliegues
-8. 
-8. Descargar terraform y dejar el archivo ejecuitable en la raiz del repositorio: 
-> garantia-segura-infrastructure 
+    1. Instalar Ubuntu para windows
+    2. A traves de la consola de ubuntu instalada en windows se deben ejecutar los siguientes comandos:
+        - Ir a la carpeta root del sistema
+            ```sh
+                [~]$ cd 
+            ``` 
+        - Instalar zip
+            ```sh
+                [~]$ sudo apt install zip
+            ``` 
+        - Instalar aws-cli
+            ```sh
+                [~]$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            ``` 
+        - Descomprimir el archivo descargado en el paso anterior
+            ```sh
+                [~]$ unzip awscliv2.zip
+            ``` 
+        - Ejecutar la instalación
+            ```sh
+                [~]$ sudo ./aws/install
+            ``` 
+        - Verificar instalación
+            ```sh
+                [~]$ aws --version
+                -- aws-cli/2.1.4 Python/3.7.3 Linux/4.4.0-1
+            ``` 
+        - Actualizar los repositorios de ubuntu
+            ```sh
+                [~]$ sudo apt update
+                [~]$ sudo apt upgrade
+            ``` 
+         - Instalar Pip3
+            ```sh
+                [~]$ sudo apt install python3-pip
+            ``` 
+         - Instalar Eb-cli
+            ```sh
+                [~]$ pip3 install awsebcli --upgrade --user
+            ``` 
+         - Configurar AWS, en este paso se deben configurar las credenciales de AWS obtenidas anterioirmente
+            ```sh
+                [~]$ aws configure
+            ``` 
